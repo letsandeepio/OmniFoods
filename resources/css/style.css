@@ -198,7 +198,6 @@ header {
 /*--------main nav-----*/
 
 .main-nav {
-    display: none;
     float: right;
     list-style: none;
     margin-top: 55px;
