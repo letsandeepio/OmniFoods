@@ -1,4 +1,8 @@
 $(document).ready(() => {
+
+    let nav = $('.js--main-nav');
+    nav.slideToggle(200);
+
     $('.js--section-features').waypoint((direction) => {
         console.log("scrolled initiate")
         if (direction == "down") {
@@ -100,20 +104,20 @@ $(document).ready(() => {
     });
     
     $('.js--nav-icon').click(function(){
-        let nav = $('.js--main-nav');
+        
         let icon = $('.js--nav-icon');
         let crossHTMLIcon = '<ion-icon name="close" role="img" class="hydrated" aria-label="close"></ion-icon>';
         let menuHTMLIcon = '<ion-icon name="menu" role="img" class="hydrated" aria-label="menu"></ion-icon>';
         
         let toggleState = icon.children().attr("name");
-        
+        console.log(toggleState);
         if(toggleState=="menu"){
             icon.html(crossHTMLIcon);
         } else {
             icon.html(menuHTMLIcon);
         }
         
-        nav.slideToggle(200)
+        nav.slideToggle(200);
         
     });
 
